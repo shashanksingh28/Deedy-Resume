@@ -1,0 +1,238 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Shashank}{Singh}{
+\href{mailto:ssingh512@bloomberg.net}{ssingh512@bloomberg.net} | 480.465.2265 | \href{mailto:shashanksingh28@gmail.com}{shashanksingh28@gmail.com}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+\hspace{+0.5mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{Arizona State University}
+\descript{M.S in Computer Science}
+\location{Aug 2017 | Tempe, AZ}
+\location{ GPA: 4.0 / 4.0 }
+\sectionsep
+
+\subsection{Mumbai University}
+\descript{B.E in Information Technology}
+\location{May 2012 | Mumbai, India}
+Sardar Patel Institute of Technology
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hspace{+0.5mm}
+\section{Links} 
+Github:// \href{https://github.com/shashanksingh28}{\bf shashanksingh28} \\
+LinkedIn://  \href{https://www.linkedin.com/in/shashankhsingh}{\bf shashankhsingh}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hspace{+0.5mm}
+\section{Skills}
+\subsection{Programming}
+
+\location{Proficient:}
+\textbullet{} Python \\
+\textbullet{} Javascript \\
+\textbullet{} C++ \\
+\textbullet{} SQL \\
+
+\location{Familiar:}
+\textbullet{} C\# \\
+\textbullet{} Machine Learning \& Statistics \\
+\textbullet{} Bash Scripts \\
+\textbullet{} Java \& Hadoop \\
+\sectionsep
+
+\subsection{Frameworks \& Tools}
+\textbullet{} Numpy, Pandas, Scikit-Learn\\
+\textbullet{} NodeJS \& VueJS \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hspace{+0.25mm}
+\section{Coursework}
+\location{Graduate:}
+Fundamentals of Statistical Learning\\
+Game Theory and Applications\\
+Statistical Machine Learning\\
+Adaptive Web\\
+Software Security\\
+Artificial Intelligence \\
+Natural Language Processing\\
+Masters Thesis
+\sectionsep
+
+\section{Activities}
+HackArizona 2017,Best use of Watson platform (Sentiment Analysis)\\
+Chess tournament organizer (Barclays)\\
+Lead : Plan-India Micro-finance App\\
+Tech Lead : Undergrad Cultural Fest\\
+% Admin Head : Undergrad Student body\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+\hspace{+0.5mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{Bloomberg}
+\descript{| Software Engineer - Data Technologies}
+\location{June 2017 – Current | Princeton, NJ}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Trained in C++, Javascript and Bloomberg Tech Stack.
+\item Created an AVRO schema driven web form generator (with some extended DSL) so that analysts don't need engineers to create data entry forms.
+\item Continously enhancing Business Rule Engine (BRE), enabling anaysts to write their data quality checks on a Python based micro-service framework. Also working on making BRE scalable to batch loads with worklfow specific configurations.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Advantage xPO (Client: AMEX)}
+\descript{| RA - Digital Acquisitions}
+\location{May 2016 – Aug 2016 | Phoenix, AZ}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Improved site visit model evaluation by incorporating log data and reducing lag by 3 days with end to end automation.
+\item Removed manual dependencies in dashboard monitoring by creating a config driven, subscription based email alert system for detecting anomalies.
+\item Led the development of modeling pipeline for US site personalization and integrated modules from data scientists. Developed dashboard for continuous quality checks in the pipeline.
+\item Analyzed Zip data and checked feasibility of mapping Zip5 from IP addresses.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Arizona State University}
+\descript{| Developer \& Teaching Assistant}
+\location{Oct 2015 – May 2017 | Tempe, AZ}
+\begin{tightemize}
+\item Improved ASU mobile app with 3 bug fixes and contributed to game-day experience module based on geo-fencing.
+\item Analyzed potential areas of leverage between Salesforce and Mobile teams.
+\item Teaching Assistant for Into. to Soft. Eng. class responsible for conducting recitation sessions to help students understand concepts with examples.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Barclays}
+\descript{| Technology Analyst}
+\location{July 2012 – June 2015 | Pune, India}
+\begin{tightemize}
+\item Developed a C\# based in-house, configurable ETL solution for .NET projects in Global Tax Team.
+\item Evaluated performance of Bulk File Payment Processing system and identified problem areas.
+\item Migrated 3 tax applications in a challenging 2 month time-line.
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects \& Research}
+\begin{itemize}
+\item CodeReco: An intelligent code recommender system (Masters thesis) that recommended Java method snippets based on both syntactic and semantic features from mined samples.
+\item Improved accuracy of the \href{http://www.isi.edu/publications/licensed-sw/fanseparser/}{fanparser solution} for \href{http://www.clres.com/PrepSemeval2007.html}{Preposition Sense Disambiguation} task by incorporating word embeddings (Word2Vec) and numerical features. Accuracy increased from 88.5\% to 89\%.
+\item AutoEncoder: Developed an auto-encoder neural net from scratch which can be configured in number of nodes and hidden layers. Used to learn a lossy compression of 32x32 facial images in a 216 hidden layer activations.
+\end{itemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Publications} 
+%\renewcommand\refname{\vskip -1.5cm} % Couldn't get this working from the .cls file
+%\bibliographystyle{abbrv}
+%\bibliography{publications}
+%\nocite{*}
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
